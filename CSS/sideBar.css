@@ -13,14 +13,14 @@
   transition: transform 0.1s ease-in-out;
   overflow: scroll;
 
-  .search{
+  .search {
     width: 80%;
     margin-left: 20px;
     position: absolute;
     padding: auto;
     top: 40px;
     border-radius: 3px;
-    
+
     input {
       top: 5px;
       padding: 10px 60px 10px 10px;
@@ -124,7 +124,7 @@
     transition: font-size 0.1s ease-in-out;
 
     button {
-      margin-left: 132px;
+      /* margin-left: 132px; */
       background-color: var(--main-bg-color1);
     }
   }
@@ -165,6 +165,14 @@
         text-decoration: none;
       }
 
+      .documentArea {
+        display: flex;
+      }
+
+      .documentArea:hover {
+        background-color: var(--main-bg-color3);
+      }
+
       a {
         width: 85%;
         overflow: hidden;
@@ -195,7 +203,7 @@
       }
 
       button {
-        display: flex;
+        /* display: inline-block; */
         align-items: center;
         background: none;
         border: none;
@@ -218,6 +226,7 @@
         margin-right: 18px;
       }
     }
+
     .depth3 {
       margin-left: 22px;
 
@@ -225,6 +234,7 @@
         margin-right: 22px;
       }
     }
+
     .depth4 {
       margin-left: 28px;
 
@@ -254,4 +264,3 @@ ul.childList.hidden {
   color: #c1c1c1;
   cursor: pointer;
 }
-
