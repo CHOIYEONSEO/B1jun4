@@ -68,6 +68,11 @@ function showDocuments(doc, depth) {
   documentLink.href = '#';
 
   const documentToggle = document.createElement('i');
+  documentToggle.setAttribute(
+    'aria-expanded',
+    openState[doc.id] ? 'true' : 'false'
+  );
+
   // documentToggle.classList.add('arrow', 'right'); // 닫힘 상태
   if (openState[doc.id]) {
     documentToggle.classList.add('arrow', 'down');
@@ -102,9 +107,11 @@ function showDocuments(doc, depth) {
     if (openState[doc.id]) {
       documentToggle.classList.remove('right');
       documentToggle.classList.add('down');
+      documentToggle.setAttribute('aria-expanded', 'true');
     } else {
       documentToggle.classList.remove('down');
       documentToggle.classList.add('right');
+      documentToggle.setAttribute('aria-expanded', 'false');
     }
   });
 
